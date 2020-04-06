@@ -167,5 +167,21 @@
                 width: 100%;
                 margin: 0 auto;
             }        
-        }       
+        }
+        .catalog {
+            &__tabs {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__tab {
+                margin-bottom: 10px;
+            }
+            &__content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }      
     }
