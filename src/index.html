@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pulse</title>
+
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">        
     <link rel="stylesheet" href="css/font.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">  
-    <!-- <link rel="stylesheet" href="css/slick.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -25,7 +26,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+37379797979" class="header__phone">+373 (78) 79-79-79</a>
-                    <button class="button">заказать звонок</button>
+                    <button data-modal="consultation" class="button">заказать звонок</button>
                 </div>
             </header>
             
@@ -51,7 +52,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">заказать консультацию</button>
+                <button data-modal="consultation" class="button button_main">заказать консультацию</button>
                 <div class="promo__link">
                     или
                     <a href="#">перейти в каталог</a>
@@ -78,7 +79,7 @@
                 </div>                       
             
                 <div class="advantages__item">
-                <img src="icons/advantages/heart.png" alt="heart" class="advantages__icon">
+                <img src="icons/advantages/heart.png" alt="heart" class="advantages__icon advantages__icon_animated">
                     <div class="advantages__subtitle">
                         Заботимся о здоровье  
                     </div>
@@ -116,9 +117,9 @@
                 Просто заполните форму заявки <br>
                 и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="feed-form" action="#">
+            <form id="consultation-form" class="feed-form" action="#">
                 <input name="name" required type="text" placeholder="Ваше имя">
-                <input name="phone" required type="number" placeholder="Ваше телефон">
+                <input name="phone" required placeholder="Ваше телефон">
                 <input name="email" required type="email" placeholder="Ваше E-mail">
 
                 <button class="button button_submit">заказать консультацию</button>
@@ -126,17 +127,17 @@
         </div>
     </section>
 
-    <section class="carousel">
+    <div class="carousel">
        <div class="container">
             <div class="carousel__inner">
                 <div><img src="img/slide_1.jpg" alt="slide"></div>
                 <div><img src="img/slide_2.jpg" alt="slide"></div>
                 <div><img src="img/slide_3.jpg" alt="slide"></div>
             </div>
-            <button type="button" class="prev"><img src="../icons/left.svg"></button>
-            <button type="button" class="next"><img src="../icons/right.svg"></button>
+            <button type="button" class="prev"><img src="../icons/left.svg" alt="left"></button>
+            <button type="button" class="next"><img src="../icons/right.svg" alt="right"></button>
        </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
@@ -204,7 +205,7 @@
                     <div class="catalog-item__wrapper">
                          <div class="catalog-item__content catalog-item__content_active">
                              <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                             <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                             <div class="catalog-item__subtitle">Пульсометр Suunto M2</div>
                              <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                              <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>    
                          </div>
@@ -256,7 +257,7 @@
                     <div class="catalog-item__wrapper">
                          <div class="catalog-item__content catalog-item__content_active">
                              <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                             <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+                             <div class="catalog-item__subtitle">Пульсометр Polar FT4</div>
                              <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
                              <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>    
                          </div>
@@ -374,7 +375,7 @@
                              <li>Вы увидете информативный графический индикатор целевых тренировочных зон пульса;</li>
                              <li>Также Вы увидете информацию о расходе калорий за тренировку;</li>
                              <li>Вы сможете посмотреть данные по 10 тренировкам;</li>
-                             <a href="#"class="catalog-item__back"> НАЗАД </a>
+                             <a href="#" class="catalog-item__back"> НАЗАД </a>
                          </ul>                         
                     </div>
                      <hr>
@@ -394,7 +395,7 @@
     <section class="feed">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="feed__item">
+            <div class="feed__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_1.png" alt="Ирина Иванченко" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Ирина Иванченко</div>
@@ -408,7 +409,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_2.png" alt="Иван Сёмочкин" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Иван Сёмочкин</div>
@@ -420,7 +421,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feed__item">
+            <div class="feed__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_3.png" alt="Юлия Дашкина" class="feed__img">
                 <div class="feed__text">
                     <div class="feed__subtitle">Юлия Дашкина</div>
@@ -450,10 +451,50 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <!-- <script src="js/slick.min.js"></script> -->
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы вам перезвоним в течении 10 минут</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" type="text" placeholder="Ваше имя">
+                <input name="phone" placeholder="Ваше телефон">
+                <input name="email" type="email" placeholder="Ваше E-mail">
+
+                <button class="button button_submit">заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ: </div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required type="text" placeholder="Ваше имя">
+                <input name="phone" required placeholder="Ваше телефон">
+                <input name="email" required type="email" placeholder="Ваше E-mail">
+
+                <button class="button button_submit">купить</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>            
+        </div>
+    </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+    
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

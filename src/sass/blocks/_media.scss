@@ -15,6 +15,11 @@
     }
 }
 @media (max-width:991px) {
+    .header {
+        &__phone {
+            margin-bottom: 10px;
+        }
+    }
     .promo {
         .header {
             flex-direction: column;
@@ -63,6 +68,11 @@
     }
 }
     @media (max-width:767px) {
+        .header {
+            &__phone {
+                margin-bottom: 10px;
+            }
+        }
         .advantages {
             &__wrapper {
                 flex-direction: column;
@@ -112,6 +122,11 @@
         }              
     }
     @media (max-width:575px) {
+        .header {
+            &__phone {
+                margin-bottom: 10px;
+            }
+        }
         .promo {
             &__header {
                 font-size: 24px;
